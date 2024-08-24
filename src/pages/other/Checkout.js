@@ -458,7 +458,7 @@ stripeToken && makeRequest();
                         </div>
                       </div>
                       <div className="payment-method">
-                        <PayPalScriptProvider
+                        {/* <PayPalScriptProvider
                           options={{
                             "client-id":
                               "ActPqt3MVzbwuKZfPIItIysHPTNkOVvpiEaHYUJosBQ4uO7NxOKOntLKfk2rxQH9RnAfC8B_cq26TQXy",
@@ -490,15 +490,15 @@ stripeToken && makeRequest();
                         <Payment
                           amount={cartTotalPrice * 100}
                           placeOrder={placeOrder}
-                        />
+                        /> */}
                         <CheckoutRazorpay 
                         amount={cartTotalPrice * 100}
                         placeOrder={placeOrder}
                         />
-                        <InstaPay
+                        {/* <InstaPay
                         amount={cartTotalPrice * 100}
                         placeOrder={placeOrder}
-                        />
+                        /> */}
                       </div>
                     </div>
                     <div className="place-order mt-25">

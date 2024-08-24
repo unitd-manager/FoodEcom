@@ -9,7 +9,8 @@ const HeroSliderSingle = ({ data, sliderClass }) => {
       className={`single-slider-2 slider-height-1 d-flex align-items-center slider-height-res bg-img ${
         sliderClass ? sliderClass : ""
       }`}
-      style={{ backgroundImage: `url(${imageBase}${data.name})` }}
+      style={{ backgroundImage: `url(https://png.pngtree.com/thumb_back/fh260/back_our/20190622/ourmid/pngtree-hot-pot-gourmet-food-poster-image_206143.jpg)` }}
+      // style={{ backgroundImage: `url(${imageBase}${data.name})` }}
     >
       <div className="container">
         <div className="row">
