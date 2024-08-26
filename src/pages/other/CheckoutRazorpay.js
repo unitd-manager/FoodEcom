@@ -47,7 +47,7 @@ function CheckoutRazorpay({ amount, placeOrder }) {
     const res = await loadScript(
       "https://checkout.razorpay.com/v1/checkout.js"
     );
-
+    console.log("res",res);
     if (!res) {
       alert("Razorpay failed to load!!");
       return;
@@ -108,19 +108,24 @@ function CheckoutRazorpay({ amount, placeOrder }) {
   return (
     <div className="App">
       <header className="App-header">
+      <div className="place-order mt-25">
         <button
+        className="btn-hover"
           style={{
             textAlign: "center",
             color: "white",
-            fontSize: 20,
+            fontSize: 14,
             fontStyle: "bold",
-            backgroundColor: "black",
+            backgroundColor: "primary",
+            borderRadius:15
+            
           }}
           onClick={displayRazorpay}
           disabled={!exchangeRate} // Disable the button until exchange rate is fetched
         >
           Razorpay
         </button>
+        </div>
         {error && <p>Error: {error}</p>}
         {success && <p>Payment successful!</p>}
       </header>

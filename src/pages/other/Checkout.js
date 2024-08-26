@@ -108,8 +108,10 @@ stripeToken && makeRequest();
 
   const { addToast } = useToasts();
 
-  const placeOrder = (os) => {
+  const placeOrder = () => {
     console.log("userData", userData);
+   
+
     if (userData) {
       orderDetail.contact_id = userData.contact_id;
       orderDetail.cust_first_name = userData.first_name;
@@ -125,7 +127,8 @@ stripeToken && makeRequest();
       orderDetail.cust_phone = userData.phone;
       orderDetail.cust_address_country = userData.address_country;
       orderDetail.cust_address_state = userData.address_state;
-      orderDetail.order_status =os;
+      orderDetail.order_status ="Paid";
+      console.log("orderDetail", orderDetail);
       api
         .post("/orders/insertorders", orderDetail)
         .then((res) => {
@@ -136,6 +139,7 @@ stripeToken && makeRequest();
             item.unit_price=item.price;
             item.cost_price=item.qty*item.price;
             item.item_title=item.title;
+            console.log("item", item);
             api
               .post("/orders/insertOrderItem", item)
               .then(() => {
@@ -144,9 +148,9 @@ stripeToken && makeRequest();
               .catch((err) => console.log(err));
           });
         })
-        .then(() => {
-          history.push("/order-success");
-        })
+        // .then(() => {
+        //   history.push("/order-success");
+        // })
         .catch((err) => console.log(err));
     } else {
       console.log("please login");
@@ -170,7 +174,7 @@ stripeToken && makeRequest();
      first_name:userData.first_name,
      order_date:formatDate(orderDate),
      delivery_date:formatDate(deliveryDate),
-     order_status: os
+     order_status: "Paid"
     };
     api
       .post('/commonApi/sendgmail',{to,dynamic_template_data})
