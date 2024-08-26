@@ -148,9 +148,9 @@ stripeToken && makeRequest();
               .catch((err) => console.log(err));
           });
         })
-        // .then(() => {
-        //   history.push("/order-success");
-        // })
+        .then(() => {
+          history.push("/order-success");
+        })
         .catch((err) => console.log(err));
     } else {
       console.log("please login");
@@ -505,11 +505,11 @@ stripeToken && makeRequest();
                         /> */}
                       </div>
                     </div>
-                    <div className="place-order mt-25">
+                    {/* <div className="place-order mt-25">
                       <button className="btn-hover" onClick={placeOrder}>
                         Place Order
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
