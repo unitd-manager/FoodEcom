@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 //import Razorpay from "razorpay";
 import PropTypes from "prop-types";
+import api from "../../constants/api";
 
 async function loadScript(src) {
   return new Promise((resolve, reject) => {
@@ -34,7 +35,20 @@ function CheckoutRazorpay({ amount, placeOrder }) {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const getUser = () => {
+   
+    const userData = localStorage.getItem('user')
+   
+    const userInfo=JSON.parse(userData)
+    console.log ('userInfo',userInfo.contact_id)
 
+    api
+    .post("/contact/clearCartItems", { contact_id: userInfo.contact_id })
+  };
+  
+  // useEffect(() => {
+  //   getUser()
+  // }, []);
   useEffect(() => {
     async function getExchangeRate() {
       const rate = await fetchExchangeRate();
@@ -82,9 +96,12 @@ function CheckoutRazorpay({ amount, placeOrder }) {
           } else {
             // Handle success scenario
             setError(null);
+           
             setSuccess(true);
             const orderStatus = "Paid";
             await placeOrder(orderStatus);
+            getUser()
+         
             // Use the paymentMethod object to make a payment request to your server.
             // You can send the paymentMethod.id to your server to complete the payment.
             setIsProcessing(false);
