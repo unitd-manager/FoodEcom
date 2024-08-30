@@ -18,6 +18,8 @@ import Stripe from "stripe";
 import { Input } from "reactstrap";
 import CheckoutRazorpay from "./CheckoutRazorpay";
 import InstaPay from "./InstaPay";
+import { clearCartData } from "../../redux/actions/cartItemActions";
+
 
 const stripePromise = loadStripe(
   "pk_test_51BTUDGJAJfZb9HEBwDg86TN1KNprHjkfipXmEDMb0gSCassK5T3ZfxsAbcgKVmAIXF7oZ6ItlZZbXO6idTHE67IM007EwQ4uN3"
@@ -108,7 +110,7 @@ stripeToken && makeRequest();
 
   const { addToast } = useToasts();
 
-  const placeOrder = () => {
+  const placeOrder = (os) => {
     console.log("userData", userData);
    
 
@@ -127,7 +129,7 @@ stripeToken && makeRequest();
       orderDetail.cust_phone = userData.phone;
       orderDetail.cust_address_country = userData.address_country;
       orderDetail.cust_address_state = userData.address_state;
-      orderDetail.order_status ="Paid";
+      orderDetail.order_status =os;
       console.log("orderDetail", orderDetail);
       api
         .post("/orders/insertorders", orderDetail)
@@ -147,6 +149,13 @@ stripeToken && makeRequest();
               })
               .catch((err) => console.log(err));
           });
+        }).then(() => {
+          console.log("cart user",userData)
+          clearCartData(userData)
+            // Make the API call
+      api
+      .post("/contact/clearCartItems", { contact_id: userData.contact_id })
+       
         })
         .then(() => {
           history.push("/order-success");
