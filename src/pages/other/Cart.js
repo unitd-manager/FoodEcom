@@ -97,7 +97,7 @@ console.log('cartitems',cartItems)
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Cart</title>
+        <title>Pearl | Cart</title>
         <meta
           name="description"
           content="Cart page of UnitdEcom react minimalist eCommerce template."

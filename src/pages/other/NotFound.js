@@ -12,7 +12,7 @@ const NotFound = ({ location }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Not Found</title>
+        <title>Pearl | Not Found</title>
         <meta
           name="description"
           content="404 page of UnitdEcom react minimalist eCommerce template."

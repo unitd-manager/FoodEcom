@@ -91,10 +91,10 @@ const Home = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Home</title>
+        <title>Pearl | Home</title>
         <meta
           name="description"
-          content="Home of UnitedEcom react minimalist eCommerce template."
+          content="Home of Pearl Food eCommerce template."
         />
       </MetaTags>
       <Layout headerTop="visible">

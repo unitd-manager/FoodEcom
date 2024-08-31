@@ -50,7 +50,7 @@ function NumberCode(signupData) {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Register Verification</title>
+        <title>Pearl | Register Verification</title>
         <meta
           name="description"
           content="Compare page of UnitdEcom react minimalist eCommerce template."

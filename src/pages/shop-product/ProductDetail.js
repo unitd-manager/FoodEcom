@@ -63,10 +63,10 @@ const ProductDetail = ({ location, product }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Product Page</title>
+        <title>Pearl | Product Page</title>
         <meta
           name="description"
-          content="Product page of flone react minimalist eCommerce template."
+          content="Product page of Pearl react minimalist eCommerce template."
         />
       </MetaTags>
 

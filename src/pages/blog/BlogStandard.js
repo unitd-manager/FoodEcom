@@ -110,10 +110,10 @@ const BlogStandard = ({}) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Blog Page</title>
+        <title>Pearl | Blog Page</title>
         <meta
           name="description"
-          content="Shop page of UnitdEcom react minimalist eCommerce template."
+          content="Shop page of Pearl Food eCommerce template."
         />
       </MetaTags>
 

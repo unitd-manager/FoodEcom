@@ -10,10 +10,10 @@ const OrderSuccessPage = () => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Order-Success</title>
+        <title>Pearl | Order-Success</title>
         <meta
           name="description"
-          content="Shop page of UnitdEcom react minimalist eCommerce template."
+          content="Shop page of Pearl react minimalist eCommerce template."
         />
       </MetaTags>
 

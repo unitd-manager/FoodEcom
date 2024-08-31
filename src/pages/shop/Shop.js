@@ -115,10 +115,10 @@ const Shop = ({}) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Shop Page</title>
+        <title>Pearl | Shop Page</title>
         <meta
           name="description"
-          content="Shop page of UnitdEcom react minimalist eCommerce template."
+          content="Shop page of Pearl react minimalist eCommerce template."
         />
       </MetaTags>
 

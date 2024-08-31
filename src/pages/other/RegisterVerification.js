@@ -17,10 +17,10 @@ const LoginRegister = ({ location }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Register Verification</title>
+        <title>Pearl | Register Verification</title>
         <meta
           name="description"
-          content="Compare page of UnitdEcom react minimalist eCommerce template."
+          content="Compare page of Pearl react minimalist eCommerce template."
         />
       </MetaTags>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Home</BreadcrumbsItem>

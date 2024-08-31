@@ -156,7 +156,7 @@ const MyAccount = ({ location }) => {
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | My Account</title>
+        <title>Pearl | My Account</title>
         <meta
           name="description"
           content="Compare page of UnitdEcom react minimalist eCommerce template."

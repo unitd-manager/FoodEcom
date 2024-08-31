@@ -37,7 +37,7 @@ const history=useHistory();
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitedEcom | Mail verification</title>
+        <title>Pearl | Mail verification</title>
         <meta
           name="description"
           content="Compare page of UnitdEcom react minimalist eCommerce template."

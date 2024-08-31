@@ -64,10 +64,10 @@ setTimeout(()=>{
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitedEcom | Reset Password</title>
+        <title>Pearl | Reset Password</title>
         <meta
           name="description"
-          content="Compare page of UnitdEcom react minimalist eCommerce template."
+          content="Compare page of Pearl react minimalist eCommerce template."
         />
       </MetaTags>
       <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Home</BreadcrumbsItem>

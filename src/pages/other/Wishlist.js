@@ -79,10 +79,10 @@ getWishlistItems(userInfo)
   return (
     <Fragment>
       <MetaTags>
-        <title>UnitdEcom | Wishlist</title>
+        <title>Pearl | Wishlist</title>
         <meta
           name="description"
-          content="Wishlist page of UnitdEcom react minimalist eCommerce template."
+          content="Wishlist page of Pearl react minimalist eCommerce template."
         />
       </MetaTags>
 
