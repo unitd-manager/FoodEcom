@@ -64,7 +64,7 @@ const NavMenu = ({ strings, menuWhiteClass, sidebarMenu, categories }) => {
                 })}
             </ul>
           </li>
-          <li>
+          {/* <li>
             <Link to={process.env.PUBLIC_URL + "/blog-standard"}>
               {strings["blog"]}
               {sidebarMenu ? (
@@ -93,7 +93,7 @@ const NavMenu = ({ strings, menuWhiteClass, sidebarMenu, categories }) => {
               </li>
              
             </ul>
-          </li>
+          </li> */}
           <li>
             <Link to={process.env.PUBLIC_URL + "/contact"}>
               {strings["contact_us"]}
