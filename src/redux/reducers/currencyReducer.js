@@ -1,14 +1,22 @@
 import { SET_CURRENCY } from "../actions/currencyActions";
 
 const initState = {
-  currencySymbol: "$",
-  currencyName: "USD",
+  currencySymbol: "₹",
+  currencyName: "INR",
   currencyRate: 1
 };
 
 const currencyReducer = (state = initState, action) => {
   if (action.type === SET_CURRENCY) {
     const currencyName = action.payload.currencyName;
+    if (currencyName === "INR") {
+      return {
+        ...state,
+        currencySymbol: "₹",
+        currencyRate: action.payload.currencyRate,
+        currencyName
+      };
+    }
 
     if (currencyName === "USD") {
       return {

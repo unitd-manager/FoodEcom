@@ -131,7 +131,7 @@ const Home = () => {
         <FeatureIconTwo spaceTopClass="pt-100" spaceBottomClass="pb-60" />
 
         {/* blog featured */}
-        <BlogFeatured spaceBottomClass="pb-55" />
+        {/* <BlogFeatured spaceBottomClass="pb-55" /> */}
       </Layout>
     </Fragment>
   );

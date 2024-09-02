@@ -44,6 +44,12 @@ function CheckoutRazorpay({ amount, placeOrder }) {
 
     api
     .post("/contact/clearCartItems", { contact_id: userInfo.contact_id })
+    .then(() => {
+      setTimeout(()=>{
+        window.location.href = process.env.PUBLIC_URL + "/cart";
+      },1000)
+    
+    })
   };
   
   // useEffect(() => {

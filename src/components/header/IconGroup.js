@@ -38,7 +38,7 @@ const user=getUser();
     <div
       className={`header-right-wrap ${iconWhiteClass ? iconWhiteClass : ""}`}
     >
-      <div className="same-style header-search d-none d-lg-block">
+      {/* <div className="same-style header-search d-none d-lg-block">
         <button className="search-active" onClick={e => handleClick(e)}>
           <i className="pe-7s-search" />
         </button>
@@ -50,7 +50,7 @@ const user=getUser();
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
       <div className="same-style account-setting d-none d-lg-block">
         <button
           className="account-setting-active"
