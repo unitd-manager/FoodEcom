@@ -20,6 +20,7 @@ import { getSessionId, getUser } from "../../common/user";
 import imageBase from "../../constants/imageBase";
 import LottieComponent from "../../components/LottieComponent";
 import { fetchCartData,insertCartData,removeCartData,clearCartData,updateCartData } from "../../redux/actions/cartItemActions";
+//import PlacesSearch from "../../components/PlacesSearch";
 
 const Cart = ({
   location,
@@ -427,6 +428,7 @@ console.log('cartitems',cartItems)
             )}
           </div>
         </div>}
+        {/* <PlacesSearch/> */}
       </LayoutOne>
     </Fragment>
   );
