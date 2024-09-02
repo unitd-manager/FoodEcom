@@ -125,11 +125,11 @@ getWishlistItems(userInfo)
                               wishlistItem.discount_amount
                             );
                             const finalProductPrice = (
-                              wishlistItem.price * currency.currencyRate
-                            ).toFixed(2);
+                              wishlistItem.price
+                            );
                             const finalDiscountedPrice = (
-                              discountedPrice * currency.currencyRate
-                            ).toFixed(2);
+                              discountedPrice
+                            );
                             const cartItem = cartItems.filter(
                               (item) =>
                                 item.product_id === wishlistItem.product_id

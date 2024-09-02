@@ -145,11 +145,11 @@ console.log('cartitems',cartItems)
                               cartItem.discount_amount
                             );
                             const finalProductPrice = (
-                              cartItem.price * currency.currencyRate
-                            ).toFixed(2);
+                              cartItem.price
+                            );
                             const finalDiscountedPrice = (
-                              discountedPrice * currency.currencyRate
-                            ).toFixed(2);
+                              discountedPrice
+                            );
 
                             discountedPrice != null
                               ? (cartTotalPrice +=

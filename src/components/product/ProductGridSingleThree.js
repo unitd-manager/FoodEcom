@@ -32,7 +32,11 @@ const ProductGridSingleTwo = ({
 const[loginModal , setLoginModal]=useState(false);
 
   const discountedPrice = getDiscountPrice(product.price, product.discount_amount);
-  const finalProductPrice = +(product.price * currency.currencyRate).toFixed(2);
+  //const finalProductPrice = +(product.price * currency.currencyRate).toFixed(2);
+  const finalProductPrice = +(product.price);
+  // const finalDiscountedPrice = +(
+  //   discountedPrice * currency.currencyRate
+  // ).toFixed(2);
   const finalDiscountedPrice = +(
     discountedPrice * currency.currencyRate
   ).toFixed(2);

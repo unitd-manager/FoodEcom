@@ -25,10 +25,10 @@ const ProductRelatedSingle = ({
   const { addToast } = useToasts();
 
   const discountedPrice = getDiscountPrice(product.price, product.discount);
-  const finalProductPrice = +(product.price * currency.currencyRate).toFixed(2);
+  const finalProductPrice = +(product.price);
   const finalDiscountedPrice = +(
-    discountedPrice * currency.currencyRate
-  ).toFixed(2);
+    discountedPrice
+  );
   product.images= String(product.images).split(',')
   const formattedTitle = product.title.replace(/\s+/g, '-');
   return (
