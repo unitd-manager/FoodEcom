@@ -19,6 +19,7 @@ import { Input } from "reactstrap";
 import CheckoutRazorpay from "./CheckoutRazorpay";
 import InstaPay from "./InstaPay";
 import { clearCartData } from "../../redux/actions/cartItemActions";
+import DistanceCalculator from "../../components/DistaceCalculator";
 
 
 const stripePromise = loadStripe(
@@ -204,6 +205,40 @@ stripeToken && makeRequest();
 
   };
 
+  const [razorpayLiveKey, setRazorpayLiveKey] = useState("");
+ 
+
+  const getRazorpayKey = () => {
+    api.get("/setting/getRazorpayLiveKey").then((res) => {
+      setRazorpayLiveKey(res.data.data[0]);
+    });
+  };
+  const [razorpayTestKey, setRazorpayTestKey] = useState("");
+ 
+
+  const getRazorpayTestKey = () => {
+    api.get("/setting/getRazorpayTestKey").then((res) => {
+      setRazorpayTestKey(res.data.data[0]);
+    });
+  };
+
+  const [paymentMode, setPaymentMode] = useState("");
+ 
+
+  const getPaymentmode = () => {
+    api.get("/setting/getPaymentmode").then((res) => {
+      setPaymentMode(res.data.data[0]);
+    });
+  };
+  const apikey=paymentMode?.value ==='live'? razorpayLiveKey?.value: razorpayTestKey?.value;
+
+
+  console.log('paymentmode',paymentMode);
+  console.log('razorpaylive',razorpayLiveKey);
+  console.log('razorpaytest',razorpayTestKey);
+
+  console.log('apikey',apikey);
+
   useEffect(() => {
     const user = getUser();
     setUserData(user);
@@ -221,6 +256,9 @@ stripeToken && makeRequest();
         });
     }
     getAllCountries();
+    getRazorpayKey();
+    getPaymentmode();
+    getRazorpayTestKey();
   }, []);
 
   return (
@@ -458,6 +496,7 @@ stripeToken && makeRequest();
                           <ul>
                             <li className="your-order-shipping">Shipping</li>
                             <li>Free shipping</li>
+                            {orderDetail.shipping_address_po_code && <DistanceCalculator pincode={orderDetail.shipping_address_po_code}/>}
                           </ul>
                         </div>
                         <div className="your-order-total">
@@ -507,6 +546,7 @@ stripeToken && makeRequest();
                         <CheckoutRazorpay 
                         amount={cartTotalPrice * 100}
                         placeOrder={placeOrder}
+                        apikey={apikey}
                         />
                         {/* <InstaPay
                         amount={cartTotalPrice * 100}

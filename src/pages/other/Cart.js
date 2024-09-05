@@ -20,7 +20,9 @@ import { getSessionId, getUser } from "../../common/user";
 import imageBase from "../../constants/imageBase";
 import LottieComponent from "../../components/LottieComponent";
 import { fetchCartData,insertCartData,removeCartData,clearCartData,updateCartData } from "../../redux/actions/cartItemActions";
-//import PlacesSearch from "../../components/PlacesSearch";
+// import PlacesSearch from "../../components/PlacesSearch";
+// import DistanceCalculator from "../../components/DistaceCalculator";
+// import LocationFinder from "../../components/LocationFinder";
 
 const Cart = ({
   location,
@@ -156,7 +158,8 @@ console.log('cartitems',cartItems)
                                   finalDiscountedPrice * cartItem.qty)
                               : (cartTotalPrice +=
                                   finalProductPrice * cartItem.qty);
-                                  const formattedTitle = cartItem.title.replace(/\s+/g, '-');
+                                  const formattedTitle = cartItem.title;
+                                  // .replace(/\s+/g, '-');
                             return (
                               <tr key={key}>
                                 <td className="product-thumbnail">
@@ -428,7 +431,9 @@ console.log('cartitems',cartItems)
             )}
           </div>
         </div>}
-        {/* <PlacesSearch/> */}
+        {/* <PlacesSearch/>
+        <DistanceCalculator/>
+        <LocationFinder/> */}
       </LayoutOne>
     </Fragment>
   );
