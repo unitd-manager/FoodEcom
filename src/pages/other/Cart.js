@@ -431,9 +431,7 @@ console.log('cartitems',cartItems)
             )}
           </div>
         </div>}
-        {/* <PlacesSearch/>
-        <DistanceCalculator/>
-        <LocationFinder/> */}
+       
       </LayoutOne>
     </Fragment>
   );

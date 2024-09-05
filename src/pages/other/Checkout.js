@@ -19,7 +19,7 @@ import { Input } from "reactstrap";
 import CheckoutRazorpay from "./CheckoutRazorpay";
 import InstaPay from "./InstaPay";
 import { clearCartData } from "../../redux/actions/cartItemActions";
-import DistanceCalculator from "../../components/DistaceCalculator";
+//import DistanceCalculator from "../../components/DistaceCalculator";
 
 
 const stripePromise = loadStripe(
@@ -496,7 +496,8 @@ stripeToken && makeRequest();
                           <ul>
                             <li className="your-order-shipping">Shipping</li>
                             <li>Free shipping</li>
-                            {orderDetail.shipping_address_po_code && <DistanceCalculator pincode={orderDetail.shipping_address_po_code}/>}
+                            {/* {orderDetail.shipping_address_po_code && <DistanceCalculator pincode={orderDetail.shipping_address_po_code}/>} */}
+                          
                           </ul>
                         </div>
                         <div className="your-order-total">
