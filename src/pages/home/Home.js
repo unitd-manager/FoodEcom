@@ -19,17 +19,40 @@ const Home = () => {
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
   const [mostPopularProducts, setMostPopularProducts] = useState([]);
 
-  const getSliderDatas = () => {
+  // const getSliderDatas = () => {
+  //   api
+  //     .post("/file/getListOfFiles", { record_id: 31, room_name: "menu" })
+  //     .then((res) => {
+  //       setSliderData(res.data);
+  //       console.log("sliderData", res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+  const getBanner = () => {
     api
-      .post("/file/getListOfFiles", { record_id: 31, room_name: "menu" })
-      .then((res) => {
-        setSliderData(res.data);
+      .get('/content/getBanners')
+      .then(res => {
+        // Assuming res.data.data is an array
+        const banners = res.data.data;
+  
+        // Use forEach to iterate through the array of banners
+        banners.forEach((banner, index) => {
+          console.log(`Banner ${index + 1}:`, banner);  // Logs each banner's data
+        });
+  
+        // Now set the state with the fetched data
+        setSliderData(banners);
+  
+        // Logging the entire response data for debugging
         console.log("sliderData", res.data);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(error => {
+        console.log("error", error);
       });
   };
+  
 
   const getBestSellingProducts = () => {
     api
@@ -83,7 +106,8 @@ const Home = () => {
       await getMostPopularProducts();
       await getNewProducts();
       await getOfferProducts();
-      await getSliderDatas();
+      // await getSliderDatas();
+      await getBanner();
     };
     getAllData();
     // getDataFromApi()
