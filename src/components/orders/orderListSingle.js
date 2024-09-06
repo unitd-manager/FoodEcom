@@ -187,7 +187,7 @@ const OrderListSingle = ({
                 )}
               </div>
             </div>
-            <div className="col-xl-2 col-md-2 col-sm-2">
+            <div className="col-xl-5 col-md-1 col-sm-1">
               <div className="shop-list-content">
                 <div className="price-2">
                   <Link
