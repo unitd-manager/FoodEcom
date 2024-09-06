@@ -144,7 +144,7 @@ const OrderListSingle = ({
                 )}
               </div>
             </div>
-            <div className="col-xl-2 col-md-1 col-sm-1">
+            <div className="col-xl-5 col-md-1 col-sm-1">
               <div className="shop-list-content">
                 <div className="price-2">
                   <span>Price :</span>
@@ -152,7 +152,30 @@ const OrderListSingle = ({
                     {currency.currencySymbol + product.qty * product.unit_price}{" "}
                   </span>
                 </div>
+                <div className="price-2">
+                  <Link
+                    to={
+                      process.env.PUBLIC_URL +
+                      "/order-detail/" +
+                      product.order_id
+                    }
+                  >
+                  Order Date :  <span>{product.order_date}</span>
+                  </Link>
+                </div>
 
+                <div className="price-2">
+                  <Link
+                    to={
+                      process.env.PUBLIC_URL +
+                      "/order-detail/" +
+                      product.order_id
+                    }
+                  >
+                  Delivery Date :  <span>{product.delivery_date}</span>
+                  </Link>
+                </div>
+                
                 {product.rating && product.rating > 0 ? (
                   <div className="rating-review">
                     <div className="product-list-rating">
@@ -174,7 +197,18 @@ const OrderListSingle = ({
                       product.order_id
                     }
                   >
-                    <span>{product.order_status}</span>
+                  payment :  <span>{product.order_status}</span>
+                  </Link>
+                </div>
+                <div className="price-2">
+                  <Link
+                    to={
+                      process.env.PUBLIC_URL +
+                      "/order-detail/" +
+                      product.order_id
+                    }
+                  >
+                  Delivery :  <span>{product.delivery_status}</span>
                   </Link>
                 </div>
                 {product.rating && product.rating > 0 ? (

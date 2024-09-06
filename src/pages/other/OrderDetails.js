@@ -116,7 +116,7 @@ const OrderDetailsPage = ({ orderStatus }) => {
                             <Row>
                               <Col md={4}>
                                 <img
-                                  src={`http://43.228.126.245/united-ecomm-api/storage/uploads/${item.images[0]}`}
+                                  src={`https://foodecom.unitdtechnologies.com/storage/uploads/${item.images[0]}`}
                                   alt="product image"
                                   style={{ height: "180px" }}
                                 />
@@ -168,9 +168,9 @@ const OrderDetailsPage = ({ orderStatus }) => {
                   ))}
                 </ListGroup>
                 {returnModal && <ReturnOrderModal returnModal={returnModal} setReturnModal={setReturnModal} item={returnItem}/>}
-                <InvoicePdf
+                {/* <InvoicePdf
                  order={order}
-                 invoiceId={id}/>
+                 invoiceId={id}/> */}
               </Card.Body>
             </Card>
           </Col>
