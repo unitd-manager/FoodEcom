@@ -91,7 +91,7 @@ const MobileNavMenu = ({ strings }) => {
               <Link to={process.env.PUBLIC_URL + "/"}>
                 {strings["home_group_two"]}
               </Link>
-              <ul className="sub-menu">
+              {/* <ul className="sub-menu">
                 <li>
                   <Link to={process.env.PUBLIC_URL + "/home-furniture-five"}>
                     {strings["home_furniture_five"]}
@@ -162,13 +162,13 @@ const MobileNavMenu = ({ strings }) => {
                     {strings["home_onepage_scroll"]}
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </li>
             <li className="menu-item-has-children">
               <Link to={process.env.PUBLIC_URL + "/"}>
                 {strings["home_group_three"]}
               </Link>
-              <ul className="sub-menu">
+              {/* <ul className="sub-menu">
                 <li>
                   <Link to={process.env.PUBLIC_URL + "/home-grid-banner"}>
                     {strings["home_grid_banner"]}
@@ -219,16 +219,16 @@ const MobileNavMenu = ({ strings }) => {
                     {strings["home_valentines_day"]}
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </li>
           </ul>
         </li>
 
         <li className="menu-item-has-children">
-          <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
+          <Link to={process.env.PUBLIC_URL + "/shop"}>
             {strings["shop"]}
           </Link>
-          <ul className="sub-menu">
+          {/* <ul className="sub-menu">
             <li className="menu-item-has-children">
               <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
                 {strings["shop_layout"]}
@@ -335,19 +335,19 @@ const MobileNavMenu = ({ strings }) => {
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
         </li>
-        <li>
+        {/* <li>
           <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
             {strings["collection"]}
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
             {strings["offers"]}
           </Link>
         </li>
-        <li className="menu-item-has-children">
+        {/* <li className="menu-item-has-children">
           <Link to={process.env.PUBLIC_URL + "/"}>{strings["pages"]}</Link>
           <ul className="sub-menu">
             <li>
@@ -396,8 +396,8 @@ const MobileNavMenu = ({ strings }) => {
               </Link>
             </li>
           </ul>
-        </li>
-        <li className="menu-item-has-children">
+        </li> */}
+        {/* <li className="menu-item-has-children">
           <Link to={process.env.PUBLIC_URL + "/blog-standard"}>
             {strings["blog"]}
           </Link>
@@ -423,7 +423,7 @@ const MobileNavMenu = ({ strings }) => {
               </Link>
             </li>
           </ul>
-        </li>
+        </li> */}
         <li>
           <Link to={process.env.PUBLIC_URL + "/contact"}>
             {strings["contact_us"]}
