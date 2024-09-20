@@ -312,11 +312,9 @@ console.log('cartitems',cartItems)
                       </div>
                       <div className="cart-clear">
                         <button onClick={() => clearCartItems(addToast)}>
-                          Clear Shopping Cart
+                          Clear Cart
                         </button>
-                      </div>
-             
-   
+                      </div>   
                     </div>
                   </div>
                 </div>

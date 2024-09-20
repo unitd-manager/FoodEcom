@@ -2861,21 +2861,22 @@
   }
 }
 .single-slider-2 {
-  width: 100%; /* Full width */
-  height: 100vh; /* Default full viewport height */
-  background-size: cover; /* Default to cover the container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent image repetition */
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Ensure each slide stays in its own space */
+  z-index: 1; /* Ensure proper stacking order */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 /* Mobile-specific styles */
 @media (max-width: 767px) {
   .single-slider-2 {
-    background-size: contain; /* Ensure the full image is visible */
-    background-position: center center; /* Center the image */
-    height: auto; /* Allow height to adjust based on content */
-    padding: 10px; /* Optional: Add some padding for better spacing */
+    background-size: contain;
+    background-position: center;
+    height: auto;
+    padding: 10px;
   }
 }
-
-

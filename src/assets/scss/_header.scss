@@ -2505,3 +2505,20 @@
     }
   }
 }
+.menu-item-has-children {
+  position: relative;
+}
+
+.submenu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-item-has-children:hover .submenu {
+  display: block; /* Show the submenu on hover */
+}

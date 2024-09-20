@@ -540,3 +540,30 @@ h3.cart-page-title {
     display: block;
   }
 }
+.cart-shiping-update-wrapper {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between the items */
+  align-items: center; /* Center vertically */
+  padding: 10px; /* Optional: Adjust padding as needed */
+}
+
+.shopping-button,
+.clear-button {
+  padding: 10px 20px; /* Adjust padding to reduce button size */
+  font-size: 14px; /* Optional: Reduce font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for buttons */
+}
+
+@media (max-width: 767px) {
+  .shopping-button,
+  .clear-button {
+    padding: 2px 8px; /* Smaller padding for mobile */
+    font-size: 10px; /* Smaller font size for mobile */
+  }
+  
+  .clear-button {
+    margin-left: 5px; /* Smaller margin for mobile */
+  }
+}

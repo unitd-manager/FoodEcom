@@ -38,21 +38,9 @@ const user=getUser();
     <div
       className={`header-right-wrap ${iconWhiteClass ? iconWhiteClass : ""}`}
     >
-      {/* <div className="same-style header-search d-none d-lg-block">
-        <button className="search-active" onClick={e => handleClick(e)}>
-          <i className="pe-7s-search" />
-        </button>
-        <div className="search-content">
-          <form action="#">
-            <input type="text" placeholder="Search" />
-            <button className="button-search">
-              <i className="pe-7s-search" />
-            </button>
-          </form>
-        </div>
-      </div> */}
-      <div className="same-style account-setting d-none d-lg-block">
-        <button
+     
+     <div className="same-style account-setting">
+              <button
           className="account-setting-active"
           onClick={e => handleClick(e)}
         >
@@ -113,33 +101,29 @@ const user=getUser();
         </Link>
       </div>
       <div className="same-style cart-wrap d-none d-lg-block">
-      <Link to={process.env.PUBLIC_URL + "/cart"}>
-                
-        <button className="icon-cart"
-        //  onClick={e => handleClick(e)}
-          title="Cart">
-          <i className="pe-7s-shopbag" />
-          <span className="count-style">
-            {cartItems && cartItems.length ? cartItems.length : 0}
-          </span>
-        </button>
-          
-        </Link>
-        {/* menu cart */}
-        <MenuCart
-          cartData={cartItems}
-          currency={currency}
-          deleteFromCart={deleteFromCart}
-        />
-      </div>
-      <div className="same-style cart-wrap d-block d-lg-none">
-        <Link className="icon-cart" to={process.env.PUBLIC_URL + "/cart"}>
-          <i className="pe-7s-shopbag" />
-          <span className="count-style">
-            {cartData && cartData.length ? cartData.length : 0}
-          </span>
-        </Link>
-      </div>
+  <Link to={process.env.PUBLIC_URL + "/cart"}>
+    <button className="icon-cart" title="Cart">
+      <i className="pe-7s-shopbag" />
+      <span className="count-style">
+        {cartItems && cartItems.length ? cartItems.length : 0}
+      </span>
+    </button>
+  </Link>
+  <MenuCart
+    cartData={cartItems}
+    currency={currency}
+    deleteFromCart={deleteFromCart}
+  />
+</div>
+<div className="same-style cart-wrap d-block d-lg-none">
+  <Link className="icon-cart" to={process.env.PUBLIC_URL + "/cart"}>
+    <i className="pe-7s-shopbag" />
+    <span className="count-style">
+      {cartItems && cartItems.length ? cartItems.length : 0} {/* Updated here */}
+    </span>
+  </Link>
+</div>
+
       <div className="same-style mobile-off-canvas d-block d-lg-none">
         <button
           className="mobile-aside-button"
