@@ -2860,3 +2860,22 @@
     }
   }
 }
+.single-slider-2 {
+  width: 100%; /* Full width */
+  height: 100vh; /* Default full viewport height */
+  background-size: cover; /* Default to cover the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .single-slider-2 {
+    background-size: contain; /* Ensure the full image is visible */
+    background-position: center center; /* Center the image */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Optional: Add some padding for better spacing */
+  }
+}
+
+

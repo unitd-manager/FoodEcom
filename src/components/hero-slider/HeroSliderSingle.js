@@ -8,12 +8,14 @@ const HeroSliderSingle = ({ data, sliderClass }) => {
   
   return (
     <div
-      className={`single-slider-2 slider-height-1 d-flex align-items-center slider-height-res bg-img ${
-        sliderClass ? sliderClass : ""
-      }`}
-      // style={{ backgroundImage: `url(https://c8.alamy.com/comp/2B1HFW7/assorted-chinese-food-on-dark-background-asian-food-concept-panorama-banner-2B1HFW7.jpg)` }}
-      style={{ backgroundImage: `url(${imageBase}${data.file_name})` }}
-    >
+    className={`single-slider-2 slider-height-1 d-flex align-items-center slider-height-res bg-img ${
+      sliderClass ? sliderClass : ""
+    }`}
+    style={{ 
+      backgroundImage: `url(${imageBase}${data.file_name})`,
+    }}
+  >
+  
       <div className="container">
         <div className="row">
           <div className="col-xl-6 col-lg-6 col-md-7 ml-auto">
