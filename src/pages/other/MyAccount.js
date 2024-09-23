@@ -277,71 +277,86 @@ const MyAccount = ({ location }) => {
                                 </MDBCol>
                               </MDBRow>
                             </MDBContainer>
-                            <div className="row">
-                              <div className="col-lg-6 col-md-6">
-                                <div className="billing-info">
-                                  <label>First Name</label>
-                                  <input
-                                    type="text"
-                                    name="first_name"
-                                    value={userData && userData.first_name}
-                                    onChange={handleUserData}
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-lg-6 col-md-6">
-                                <div className="billing-info">
-                                  <label>Last Name</label>
-                                  <input
-                                    type="text"
-                                    name="last_name"
-                                    value={userData && userData.last_name}
-                                    onChange={handleUserData}
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-lg-12 col-md-12">
-                                <div className="billing-info">
-                                  <label>Email Address</label>
-                                  <input
-                                    type="email"
-                                    name="email"
-                                    value={userData && userData.email}
-                                    onChange={handleUserData}
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-lg-6 col-md-6">
-                                <div className="billing-info">
-                                  <label>Telephone</label>
-                                  <input
-                                    type="text"
-                                    name="phone"
-                                    value={userData && userData.phone}
-                                    onChange={handleUserData}
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-lg-6 col-md-6">
-                                <div className="billing-info">
-                                  <label>Fax</label>
-                                  <input
-                                    type="text"
-                                    name="fax"
-                                    value={userData && userData.fax}
-                                    onChange={handleUserData}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <div className="billing-back-btn">
-                              <div className="billing-btn">
-                                <button type="submit" onClick={updateUserData}>
-                                  Continue
-                                </button>
-                              </div>
-                            </div>
-                          </div>
+                            <div className="row mobile-adjust">
+  {/* First Name Field */}
+  <div className="col-12 col-md-6">
+    <div className="billing-info">
+      <label>First Name</label>
+      <input
+        type="text"
+        name="first_name"
+        value={userData && userData.first_name}
+        onChange={handleUserData}
+        className="form-control"
+      />
+    </div>
+  </div>
+
+  {/* Last Name Field */}
+  <div className="col-12 col-md-6">
+    <div className="billing-info">
+      <label>Last Name</label>
+      <input
+        type="text"
+        name="last_name"
+        value={userData && userData.last_name}
+        onChange={handleUserData}
+        className="form-control"
+      />
+    </div>
+  </div>
+
+  {/* Email Address Field */}
+  <div className="col-12">
+    <div className="billing-info">
+      <label>Email Address</label>
+      <input
+        type="email"
+        name="email"
+        value={userData && userData.email}
+        onChange={handleUserData}
+        className="form-control"
+      />
+    </div>
+  </div>
+
+  {/* Telephone Field */}
+  <div className="col-12 col-md-6">
+    <div className="billing-info">
+      <label>Telephone</label>
+      <input
+        type="text"
+        name="phone"
+        value={userData && userData.phone}
+        onChange={handleUserData}
+        className="form-control"
+      />
+    </div>
+  </div>
+
+  {/* Fax Field */}
+  <div className="col-12 col-md-6">
+    <div className="billing-info">
+      <label>Fax</label>
+      <input
+        type="text"
+        name="fax"
+        value={userData && userData.fax}
+        onChange={handleUserData}
+        className="form-control"
+      />
+    </div>
+  </div>
+</div>
+
+<div className="billing-back-btn">
+  <div className="billing-btn">
+    <button type="submit" onClick={updateUserData}>
+      Continue
+    </button>
+  </div>
+</div>
+ </div>
                         </Card.Body>
                       </Accordion.Collapse>
                     </Card>

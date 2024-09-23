@@ -2880,3 +2880,22 @@
     padding: 10px;
   }
 }
+.mobile-adjust {
+  /* Set default padding and margin */
+  padding: 0; 
+  margin: 0; 
+}
+
+@media (max-width: 767.98px) { /* Adjust these values as needed */
+  .mobile-adjust {
+    padding-top: 70px; /* Adjust padding for mobile view */
+    margin: -70px; /* Adjust margin for mobile view */
+  }
+}
+@media (max-width: 767.98px) { /* Adjust these values as needed */
+ .billing-btn {
+    padding-top: 70px; /* Adjust padding for mobile view */
+  }
+}
+
+
