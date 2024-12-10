@@ -108,13 +108,13 @@ const Footer = ({
               <div className="footer-list">
                 <ul>
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/returnspage"}>Returns</Link>
+                    <Link to={process.env.PUBLIC_URL + "#"}>NO Returns</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to={process.env.PUBLIC_URL + "/supportpage"}>Support Policy</Link>  
-                  </li>
+                  </li> */}
                   <li>
-                    <Link to={process.env.PUBLIC_URL + "/faqpage"}>FAQs</Link>
+                    <Link to={process.env.PUBLIC_URL + "#"}>FAQs</Link>
                   </li>
                 </ul>
               </div>
@@ -139,14 +139,14 @@ const Footer = ({
                 <ul>
                   <li>
                     <a
-                      href="//www.facebook.com"
+                      href="https://www.facebook.com/pearl.tirunelveli"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Facebook
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="//www.twitter.com"
                       target="_blank"
@@ -154,17 +154,17 @@ const Footer = ({
                     >
                       Twitter
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
-                      href="//www.instagram.com"
+                      href="https://www.instagram.com/pearlfoodchain/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Instagram
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="//www.youtube.com"
                       target="_blank"
@@ -172,7 +172,7 @@ const Footer = ({
                     >
                       Youtube
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

@@ -202,11 +202,11 @@ export default function Contact({ location }) {
                     <h3>Follow Us</h3>
                     <ul>
                       <li>
-                        <a href="//facebook.com">
+                        <a href="https://www.facebook.com/pearl.tirunelveli">
                           <i className="fa fa-facebook" />
                         </a>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="//pinterest.com">
                           <i className="fa fa-pinterest-p" />
                         </a>
@@ -215,15 +215,15 @@ export default function Contact({ location }) {
                         <a href="//thumblr.com">
                           <i className="fa fa-tumblr" />
                         </a>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <a href="//vimeo.com">
                           <i className="fa fa-vimeo" />
                         </a>
-                      </li>
+                      </li> */}
                       <li>
-                        <a href="//twitter.com">
-                          <i className="fa fa-twitter" />
+                        <a href="https://www.instagram.com/pearlfoodchain/">
+                          <i className="fa fa-instagram" />
                         </a>
                       </li>
                     </ul>
